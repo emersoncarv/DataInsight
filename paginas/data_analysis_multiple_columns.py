@@ -2,8 +2,8 @@ import streamlit as st
 import time
 import pandas as pd
 from classes.Dataset import AnaliseDataset
-import locale 
-locale.setlocale(locale.LC_ALL, locale='pt_BR')
+# import locale 
+# locale.setlocale(locale.LC_ALL, locale='pt_BR')
 import plotly.express as px
 import plotly.graph_objects as go
 
