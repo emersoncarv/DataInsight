@@ -1,0 +1,10 @@
+# cmd
+python -m venv datainsightenv
+datainsightenv\Scripts\activate
+
+pip install -r requirements.txt
+#pip install numpy pandas scikit-learn matplotlib statsmodels streamlit pytest
+
+python -m streamlit run .\app.py
+
+datainsightenv\Scripts\deactivate
