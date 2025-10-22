@@ -57,7 +57,7 @@ if blnContinuar:
     # qualitativa vs qualitativa
     if ('Qualitativa' in colunaEsq['ClassifColuna']) and ('Qualitativa' in colunaDir['ClassifColuna']):
         matriz = ds.MatrizDeConfusao(nomeColunaEsq, nomeColunaDir)
-        st.dataframe(matriz.style.highlight_max(axis=0, color='orange').highlight_min(axis=0, color='lightblue'), use_container_width=True)
+        st.dataframe(matriz.style.highlight_max(axis=0, color='orange').highlight_min(axis=0, color='lightblue'), width='stretch')
         # fig = px.density_heatmap(matriz, title='Matriz de Confusão')
         # fig = px.density_mapbox(matriz)
         # st.plotly_chart(fig)

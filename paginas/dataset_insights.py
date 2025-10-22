@@ -76,7 +76,7 @@ if dados_filtrados.shape[0] > 0:
         fig = px.pie(dados_filtrados, names='Tipo de Informação')
         st.plotly_chart(fig)
     with col2:
-        st.dataframe(dados_filtrados.drop('Valor', axis=1), hide_index=True, use_container_width=True, selection_mode='multi-row')
+        st.dataframe(dados_filtrados.drop('Valor', axis=1), hide_index=True, width='stretch', selection_mode='multi-row')
     
 else:
     st.info('Não há insights a apresentar.')

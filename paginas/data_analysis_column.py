@@ -3,7 +3,7 @@ import time
 import pandas as pd
 from classes.Dataset import AnaliseDataset
 import locale 
-locale.setlocale(locale.LC_ALL, locale='pt_BR')
+locale.setlocale(locale.LC_ALL, locale='pt_BR.UTF-8')
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -48,7 +48,7 @@ if 'Qualitativa' in coluna['ClassifColuna'].iloc[0]:
         # st.write('Concentração de Itens')
         # st.write(ds.ConcentracaoDeItens(nomeColuna)['texto'])
         st.write(concentracao_itens['texto'])
-        st.dataframe(dfDistFreq, use_container_width=True)
+        st.dataframe(dfDistFreq, width='stretch')
 
     with col2:
         # # st.subheader('Distribuição dos Itens')
@@ -109,7 +109,7 @@ if 'Quantitativa' in coluna['ClassifColuna'].iloc[0]:
         st.plotly_chart(fig)
 
     with col2:
-        st.dataframe(ds.EstatisticaDescritiva(nomeColuna), use_container_width=True)
+        st.dataframe(ds.EstatisticaDescritiva(nomeColuna), width='stretch')
 
     with col3:
         # st.subheader('Outliers')
